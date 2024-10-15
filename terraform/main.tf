@@ -10,7 +10,7 @@ terraform {
     resource_group_name  = "ws-devops"
     storage_account_name = "devopshackathontfstate"
     container_name       = "tfstate"
-    key                  = "<your unique name>.tfstate"
+    key                  = "bakicp4362435345.tfstate"
   }
 }
 

@@ -14,10 +14,10 @@ jobs:
     - name: 'Checkout Github Action' 
       uses: actions/checkout@v3
       
-    - name: Setup Node 10.x
+    - name: Setup Node 22.x
       uses: actions/setup-node@v1
       with:
-        node-version: '10.x'
+        node-version: '22.x'
 
     - name: 'npm install, build, and test'
       run: |

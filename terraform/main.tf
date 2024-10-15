@@ -22,3 +22,16 @@ provider "azurerm" {
 data "azurerm_resource_group" "wsdevops" {
   name = var.rg_name
 }
+
+resource "azurerm_app_service_plan" "sp1" {
+  name                = var.app_service_plan_name
+  location            = var.location
+  resource_group_name = data.azurerm_resource_group.wsdevops.name
+  kind                = "Linux"
+  reserved            = true
+
+  sku {
+    tier = "Standard"
+    size = "S1"
+  }
+}
